@@ -1,1 +1,1 @@
-Tech writing resume
+Tech writing resume - Strahinja Milošević
