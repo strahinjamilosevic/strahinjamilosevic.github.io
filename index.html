@@ -241,10 +241,88 @@
 							<article id="projects">
 								<h2 class="major">Projects</h2>
 								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-							<ul>
-								<li>Placeholder</li>
-							</ul>
 								
+										<h3><a href="https://docs.adyen.com/api-explorer/terminal-api/1/overview">Terminal API migration</a></h3>
+										<h4>Task</h4>
+										<p>
+										Migrate the complete documentation for the Terminal API to the API Explorer in the OpenAPI format.
+										</p>
+										<h4>Challenge</h4>
+										<p>
+										The Terminal API is based on the <a href="https://www.nexo-standards.org/standards/nexo-retailer-protocol">nexo retailer protocol</a>, which is not a REST API. For years, the only reference was available on a <a href="https://docs.adyen.com/point-of-sale/design-your-integration/terminal-api/terminal-api-reference/">single doc page</a> that pulled content from many HTML files.
+										</p>
+										<h4>Result</h4>
+										<p>
+										I led the efforts to map out the API structure using the official nexo reference, which is in a PDF, and cross-referenced it with our documentation and the OpenAPI specs consumed by the API Explorer. I navigated the project between the team that owned the original Terminal API repository in C and the team that owned the API reference tooling and pipelines based on the OpenAPI standard.
+										</p>
+										<p>
+										We created a Python script to produce the specs our tooling could consume, and added a new page type to the API Explorer to show the structure by request type.
+										</p>
+										<p>
+										The project also included cleaning up the documentation repository, ensuring links throughout hundreds of pages led to the new reference, and proofreading descriptions, enums, and more.
+										</p>
+										
+										<h3><a href="https://docs.adyen.com/point-of-sale/nfc-tags/">NFC tags reading and writing</a></h3>
+										<h4>Task</h4>
+										<p>
+										Document how to read and write to NFC-enabled tags (MIFARE cards) using Adyen's payment terminals.
+										</p>
+										<h4>Challenge</h4>
+										<p>
+										Explain the structure of four different requests (identify, read, write, or create a session) sent from a terminal. Due to the varying data structures of these cards, each request needs to include fields specific to the card type. Additionally, there are two types of terminals with different operating systems, which do not always have parity.
+										</p>
+										<h4>Result</h4>
+										<p>
+										Using the available CMS components, I organized the page to allow users to easily find the content they need for their specific combination of card, payment terminal, and request type.
+										</p>
+										
+										<h3><a href="https://docs.adyen.com/point-of-sale/logistics/">Logistics API</a></h3>
+										<h4>Task</h4>
+										<p>
+										Document an API that cannot be included in our official reference because it is not customer-facing. The Logistics API is used by the Adyen supply chain to automate delivery processes between carriers, warehouses, and customers.
+										</p>
+										<h4>Challenge</h4>
+										<p>
+										Present the API reference without the use of the API reference tooling. The task was to make the API reachable but hidden in the documentation, using only information architecture and simple components to navigate the content. Additionally, the API was not yet built when I started working on it.
+										</p>
+										<h4>Result</h4>
+										<p>
+										I wrote the API reference documentation from a Stoplight mockup. I identified inconsistencies between the endpoints and led efforts to simplify the JSON structure of the requests and responses, enabling our partners to integrate the API more easily and replace the old messaging system before the planned deadline.
+										</p>
+										
+										<h3><a href="https://docs.adyen.com/point-of-sale/">IPP information architecture overhaul</a></h3>
+										<h4>Task</h4>
+										<p>
+										Following internal and external feedback that our left-side navigation was overbearing and difficult to navigate, we identified an opportunity to clean up the information architecture for our In-person payments content area.
+										</p>
+										<h4>Challenge</h4>
+										<p>
+										The IPP left-side navigation had 67 items grouped under 10 labels. We needed to re-categorize pages into conceptually logical chunks without hindering opur users' ability to find content, while also reducing the clutter in the table of contents.
+										</p>
+										<h4>Result</h4>
+										<p>
+										With a writer colleague, I conducted extensive interviews with internal users and held several working sessions with direct clients to understand how they consume content. We then cross-referenced the findings with Google Analytics and created a new information architecture that reduced the items from 67 to 47 under 7 labels.
+										</p>
+										<p>
+										We conducted final A/B tests and published the pages. After a year, Google Analytics indicated a substantial decrease in negative feedback, increased traffic to the previously problematic areas, and an overall traffic increase of about 25% in the IPP section.
+										</p>
+										
+										<h3><a href="https://docs.proglove.com/?lang=en">ProGlove docs website</a></h3>
+										<h4>Task</h4>
+										<p>
+										As the first writer at ProGlove, I was tasked with creating a comprehensive documentation portal for a protfolio of barcode scanners that integrated with Android and iOS devices. Also, I had to document the browser-based analytics platform Insight as well as APIs used to pass barcode content to any system.
+										</p>
+										<h4>Challenge</h4>
+										<p>
+										When I joined, there was minimal content on a static website built using MkDocs. The challenge as a single writer was to manage all the tasks to create new content, re-write the existing content, deal with review bottlenecks, troubleshoot pipelines, and more.
+										</p>
+										<h4>Result</h4>
+										<p>
+										I introduced a new CMS, Paligo, which enabled quicker review processes with the product teams. It also offered a help desk website I used for our official docs adjusted HTML and CSS to align with our company identity. I migrated all pages from the old tool using PanDoc and custom scripts. I independently created the new information architecture for the entire product portfolio and implemented OpenAPI references for the public APIs.
+										</p>
+										<p>
+										After a year, ProGlove had a professional documentation portal for multiple products with media, versioning, release notes, and automatically updated API references.
+										</p>
 							</article>
 
 						<!-- Contact -->
