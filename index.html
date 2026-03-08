@@ -253,8 +253,102 @@
 									<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
 
 									<h3>
+										<a href="https://docs.bitvavo.com/">
+											Bitvavo API docs platform: engineering multi-protocol coverage from scratch
+										</a>
+									</h3>
+
+									<h4>Why</h4>
+									<p>
+										The existing Bitvavo documentation was a Redocly free-tier site that had very basic API reference information.
+										REST and WebSocket content shared a single-scroll page with no clear protocol separation,
+										missing or incorrect code samples, and ambiguous authentication guidance. For a crypto exchange
+										competing on developer trust, this was a critical gap with no owner to address it.
+									</p>
+
+									<h4>What</h4>
+									<p>
+										There was no established docs tooling, no publishing pipeline, and little institutional knowledge
+										to build on. The platform needed to support REST, WebSocket, and later FIX protocols — each with
+										distinct structural and UX requirements — while integrating into company infrastructure
+										built on Terraform, Kubernetes, and Cloudflare.
+									</p>
+
+									<h4>How</h4>
+									<p>
+										After evaluating multiple SSGs and API documentation tools, I selected Docusaurus with
+										docusaurus-openapi-docs plugin and rewrote the full API reference, splitting REST and WebSocket
+										into distinct, purpose-built sections. WebSocket posed a specific challenge: AsyncAPI
+										was not mature enough in early 2025, so I adapted the OpenAPI YAML structure to represent
+										WebSocket channels and swizzled Docusaurus components to render them correctly for that
+										protocol's logic hiding the REST API testing panel and adding dedicate
+									</p>
+									<p>
+										I built the publishing pipeline using Terraform, Kubernetes, and Cloudflare, with separate
+										staging and production environments, and a PR preview workflow that generates a GitHub Pages
+										preview per labelled pull request — updating on every commit and deleting automatically on merge.
+										I implemented Algolia search with extensive crawler tuning, added a PushFeedback widget
+										with a dedicated docs@bitvavo.com address for direct user communication, and certified
+										Bitvavo's Postman collections — earning the Postman Verified checkmark and remaining
+										the sole maintainer.
+									</p>
+
+									<h4>Result</h4>
+									<p>
+										The platform now covers multiple REST, WebSocket, and FIX APIs across trading, market data,
+										and institutional domains. The site grew from fewer than 100 to over 60,000 users,
+										adding more than 6,000 new monthly users.
+									</p>
+
+									<h3>
+										<a href="https://docs.bitvavo.com/">
+											Bitvavo docs strategy: ownership of content, information architecture, and API governance
+										</a>
+									</h3>
+
+									<h4>Why</h4>
+									<p>
+										With multiple API-producing teams and no established documentation processes,
+										there was a real risk of inconsistent API design, fragmented content, and a
+										site that would become harder to maintain as the product portfolio grew.
+									</p>
+
+									<h4>What</h4>
+									<p>
+										As the sole technical writer, I needed to build the documentation function from
+										the ground up — not only producing content, but acting simultaneously as SME,
+										project manager, and platform owner across all public and internal documentation.
+									</p>
+
+									<h4>How</h4>
+									<p>
+										I restructured the site's information architecture twice. The first iteration
+										improved content hierarchy and navigation. The second rebuilt the site with a
+										new homepage using custom Docusaurus components — clickable tiles, a mini-TOC,
+										and skip-to-content — and reorganized the top navigation into a Docs section
+										for guides and an API section categorized by Trading, Market Data, and
+										Institutional APIs.
+									</p>
+									<p>
+										I introduced release management with versioning and sneak previews to give users
+										a predictable release schedule. I established ticket templates, contribution
+										workflows, and review processes across API teams. I also led an API governance
+										initiative with staff engineers, producing a living document covering naming
+										conventions, authentication, rate limits, error handling, and
+										backward-compatible change management.
+									</p>
+
+									<h4>Result</h4>
+									<p>
+										The documentation function now operates with clear standards and repeatable
+										processes across all teams. I serve as the de facto product manager and SME
+										for docs.bitvavo.com, independently researching, planning, and delivering
+										all documentation without external direction.
+									</p>
+
+									<h3>
 										<a href="https://docs.adyen.com/api-explorer/terminal-api/1/overview">
-											Enable a non-REST platform to scale through modern API tooling
+											Terminal API reference: OpenAPI for a legacy payment protocol
 										</a>
 									</h3>
 
@@ -293,7 +387,7 @@
 
 									<h3>
 										<a href="https://docs.adyen.com/point-of-sale/nfc-tags/">
-											Reduce integration errors across hardware, OS, and data variability
+											NFC integration docs: untangling hardware, OS, and card-type complexity
 										</a>
 									</h3>
 
@@ -324,7 +418,7 @@
 									</p>
 
 									<h3>
-											Support supply-chain automation without exposing internal APIs
+											Logistics API reference: internal docs with no public footprint
 									</h3>
 
 									<h4>Why</h4>
@@ -357,7 +451,7 @@
 
 									<h3>
 										<a href="https://docs.adyen.com/point-of-sale/">
-											Improve content discoverability at scale through information architecture
+											IPP docs overhaul: IA restructure that drove 25% more traffic
 										</a>
 									</h3>
 
@@ -389,7 +483,7 @@
 
 									<h3>
 										<a href="https://docs.proglove.com/?lang=en">
-											Build a scalable documentation platform as the first writer
+											ProGlove docs platform: zero to production as the sole writer
 										</a>
 									</h3>
 
