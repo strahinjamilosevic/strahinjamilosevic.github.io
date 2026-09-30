@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Strahinja Milošević | This site has moved</title>
+		<link rel="canonical" href="https://strahinjamilosevic.com/" />
+		<script>
+			// Old single-page anchors mapped to the pages of the new site.
+			(function () {
+				var base = 'https://strahinjamilosevic.com/';
+				var pages = {
+					skills: 'skills',
+					work: 'experience',
+					experience: 'experience',
+					education: 'education',
+					projects: 'projects',
+					contact: 'contact'
+				};
+				var anchor = window.location.hash.replace(/^#/, '').toLowerCase();
+				var page = pages.hasOwnProperty(anchor) ? pages[anchor] : '';
+				window.location.replace(base + page);
+			})();
+		</script>
+		<meta http-equiv="refresh" content="0; url=https://strahinjamilosevic.com/" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+		<h1>This site has moved</h1>
+		<p>My portfolio now lives at <a href="https://strahinjamilosevic.com/">strahinjamilosevic.com</a>.</p>
+	</body>
+</html>
